@@ -1,7 +1,7 @@
 <template>
     <Breadcrumb :items="breadcrumbItems" />
-    <div class="bg-white">
-      <div class="border-b border-gray-200 px-4 py-2 flex justify-between items-center">
+    <div class="bg-white mb-10">
+      <div class="border-b border-gray-200 px-4 py-2 flex justify-between items-center shadow-header">
         <div class="flex space-x-8">
           <button 
             v-for="tab in tabs" 
@@ -22,15 +22,15 @@
           </button>
         </div>
         <button 
-          @click="handleAddCard"
-          class="bg-textPrimary text-white px-4 py-2 rounded-md flex items-center space-x-2"
+          @click="showAddCard = true"
+          class="bg-textPrimary text-white px-2 flex items-center space-x-2"
         >
-          <span class="text-xl font-bold">+</span>
+          <span class="text-xl">+</span>
           <span>Add Card</span>
         </button>
       </div>
 
-      <div class="p-4">
+      <div class="p-6">
         <div v-if="activeTab === 'saved'">
           <SavedCard />
         </div>
@@ -44,12 +44,20 @@
         </div>
       </div>
     </div>
+
+    <AddCard 
+      :is-open="showAddCard" 
+      @close="showAddCard = false"
+    />
 </template>
 
 <script setup lang="ts">
 import Breadcrumb from '@/components/layout/BreadCrumb.vue'
 import { ref } from 'vue'
 import SavedCard from '@/components/large/SavedCard.vue'
+import AddCard from '@/components/large/AddCard.vue'
+import type { CardFormData } from '@/types/card'
+
 const breadcrumbItems = [
   { name: 'Cards', path: '/cards' }
 ]
@@ -61,10 +69,7 @@ const tabs = [
 
 const activeTab = ref('saved')
 
-
 const gdCards = ref([])
 
-const handleAddCard = () => {
-  console.log('Add card clicked')
-}
+const showAddCard = ref(false)
 </script>

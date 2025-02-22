@@ -1,39 +1,59 @@
-# giriraj_digital_card_practical
+# Vue 3 + Vite Project
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a Vue 3 project powered by Vite, providing a fast development experience with optimized build performance.
 
-## Recommended IDE Setup
+## 📌 Prerequisites
+Make sure you have the following installed on your system:
+- [Node.js](https://nodejs.org/) (version 16+ recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🚀 Getting Started
 
-## Type Support for `.vue` Imports in TS
+### 1️⃣ Clone the Repository
+```sh
+git clone https://github.com/KaranJaviya11/card_demo.git
+cd card_demo
+```
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
+### 2️⃣ Install Dependencies
+Using npm:
 ```sh
 npm install
 ```
+Using yarn:
+```sh
+yarn install
+```
 
-### Compile and Hot-Reload for Development
-
+### 3️⃣ Start Development Server
+Run the following command to start the development server:
 ```sh
 npm run dev
 ```
+Or with yarn:
+```sh
+yarn dev
+```
+By default, the application runs on `http://localhost:5173/`.
 
-### Type-Check, Compile and Minify for Production
-
+## 📦 Build for Production
+To create an optimized production build, run:
 ```sh
 npm run build
 ```
-
-### Lint with [ESLint](https://eslint.org/)
-
+Or with yarn:
 ```sh
-npm run lint
+yarn build
 ```
+The built files will be generated in the `dist/` directory.
+
+## ✅ Preview Production Build
+You can preview the production build locally using:
+```sh
+npm run preview
+```
+Or with yarn:
+```sh
+yarn preview
+```
+
